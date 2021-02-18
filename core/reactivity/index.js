@@ -54,3 +54,47 @@ effectWatch(() => {
 
 // 值发生变更
 dep._val = 20;
+
+// recative
+// dep —> number string
+// object -> key  -> dep
+
+// 1.这个对象什么时候改变的
+// object.a -> get
+// object.a = 2 -> set
+
+// vue2 defineproperty
+// vue3 proxy
+
+const targetMap = new Map();
+
+function reactive(raw) {
+  return new Proxy(raw, {
+    get(target,key) {
+      console.log(target, key);
+      // key -> dep
+      // dep 我们存储在哪里
+
+      let depsMap = targetMap.get(target);
+      if (!depsMap) {
+        despMap = new Map();
+        targetMap.set(target, depsMap)
+      }
+      let dep = depsMap.get(key);
+      if (!dep) {
+        dep = new Dep();
+        despMap.set(key, dep);
+      }
+      dep.depend();
+      // return target[key];
+      return Reflect.get(target, key);
+    },
+    
+  })
+}
+
+const user = reactive({
+  age: 19,
+})
+
+user.age;
