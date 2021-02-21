@@ -36,7 +36,7 @@ class Dep {
 }
 
 
-export function effect(effect) {
+export function effectWatch(effect) {
   // 收集依赖
   currentEffect = effect;
   effect();
@@ -47,7 +47,7 @@ export function effect(effect) {
 
 // let b;
 
-// effect(() => {
+// effectWatch(() => {
 //   b = dep.value + 10;
 //   console.log(b);
 // });
@@ -108,7 +108,7 @@ export function reactive(raw) {
 // })
 
 // let double;
-// effect(() => {
+// effectWatch(() => {
 //   console.log('--- reactive ---');
 //   double = user.age;
 //   console.log(user,double);
