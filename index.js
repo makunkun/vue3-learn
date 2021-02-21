@@ -1,5 +1,5 @@
 // 引入vue3的reactivity包
-const  { effect, reactive } = require('@vue/reactivity');
+import  { effect, reactive } from './core/reactivity/index.js';
 
 // v1
 
