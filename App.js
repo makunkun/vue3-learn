@@ -60,7 +60,8 @@ export default {
         id: 'app-id',
         class: 'show-time',
       },
-      // String(context.state.count)
+      // String(context.state.count),
+      [h('p',null, 'heihei'), h('p',null, 'haha')]
       );
   },
 

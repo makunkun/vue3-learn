@@ -11,7 +11,6 @@ export function createApp(rootComponent) {
         const subTree = rootComponent.render(context);
         console.log(subTree);
         mountElement(subTree,rootContainer);
-        // rootContainer.append(element);
       })
     }
   }
