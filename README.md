@@ -9,5 +9,7 @@ mini-vue3
 2.实现的主要功能
 
 * reactivity响应式的实现;
+
 * setup&render;
+
 * 虚拟dom&diff算法；
