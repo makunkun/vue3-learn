@@ -1,12 +1,12 @@
 # vue3-learn
 
-mini-vue3
+## mini-vue3
 
-1.项目启动方式
+### 1.项目启动方式
 
 * 根目录live-server启动
 
-2.实现的主要功能
+### 2.实现的主要功能
 
 * reactivity响应式的实现;
 
