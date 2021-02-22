@@ -55,13 +55,13 @@ export default {
       // const div = document.createElement('div');
       // div.innerText = context.state.count;
       // return div;
-      return h('div',
+      return h(context.state.tagName,
       {
-        id: 'app-id',
+        id: 'app-' + context.state.count,
         class: 'show-time',
       },
       // String(context.state.count),
-      [h('p',null, 'heihei'), h('p',null, 'haha')]
+      [h('p',null, String(context.state.count)), h('p',null, 'haha')]
       );
   },
 
@@ -69,6 +69,7 @@ export default {
     // a = 响应式数据
     const state = reactive({
       count: 0,
+      tagName: 'div'
     });
     window.state = state;
     return {
