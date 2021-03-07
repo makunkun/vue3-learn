@@ -10,6 +10,8 @@
 
 * reactivity响应式的实现;
 
-* setup&render;
+* setup & render;
 
-* 虚拟dom&diff算法；
+* 虚拟dom & diff算法；
+
+* 模块化（modularizing）
